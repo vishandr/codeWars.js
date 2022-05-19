@@ -11,3 +11,9 @@ function solution(str, ending){
   if (ending.length === 0){return true};
   return (str.slice(-ending.length) === ending)
 }
+
+// оказівается есть вариант значительно проще и современне:
+ return str.endsWith(ending);
+
+// и еще один вариант
+return str.substring(str.length - ending.length) === ending
